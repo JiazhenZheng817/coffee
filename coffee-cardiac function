@@ -1,0 +1,325 @@
+############################################Sinus tachycardia
+
+data$Sinus_tachycardia=NA
+
+ECG=function(x){
+  for (i in 1:nrow(data)) {
+    if (is.na(data$Sinus_tachycardia[i])&grepl("Sinus tachycardia",data[[x]][i])) {
+      data$Sinus_tachycardia[i]=1
+      print(i)
+    }
+  }
+  return(data$Sinus_tachycardia)
+}
+
+for (p in ls(data,pattern="p12653_i2_a")) {
+  data$Sinus_tachycardia=ECG(p)
+}   
+
+data$Sinus_tachycardia[is.na(data$Sinus_tachycardia)]=0
+table(data$Sinus_tachycardia)
+
+
+############################################Sinus rhythm with short PR
+
+data$Sinus_rhythm_with_short_PR=NA
+
+ECG=function(x){
+  for (i in 1:nrow(data)) {
+    if (is.na(data$Sinus_rhythm_with_short_PR[i])&grepl("Sinus rhythm with short PR",data[[x]][i])) {
+      data$Sinus_rhythm_with_short_PR[i]=1
+      print(i)
+    }
+  }
+  return(data$Sinus_rhythm_with_short_PR)
+}
+
+for (p in ls(data,pattern="p12653_i2_a")) {
+  data$Sinus_rhythm_with_short_PR=ECG(p)
+}   
+
+data$Sinus_rhythm_with_short_PR[is.na(data$Sinus_rhythm_with_short_PR)]=0
+table(data$Sinus_rhythm_with_short_PR)
+
+
+############################################premature supraventricular complexes
+
+data$premature_supraventricular_complexes=NA
+
+ECG=function(x){
+  for (i in 1:nrow(data)) {
+    if (is.na(data$premature_supraventricular_complexes[i])&grepl("premature supraventricular complexes",data[[x]][i])) {
+      data$premature_supraventricular_complexes[i]=1
+      print(i)
+    }
+  }
+  return(data$premature_supraventricular_complexes)
+}
+
+for (p in ls(data,pattern="p12653_i2_a")) {
+  data$premature_supraventricular_complexes=ECG(p)
+}   
+
+data$premature_supraventricular_complexes[is.na(data$premature_supraventricular_complexes)]=0
+table(data$premature_supraventricular_complexes)
+
+############################################premature atrial complexes
+
+data$premature_atrial_complexes=NA
+
+ECG=function(x){
+  for (i in 1:nrow(data)) {
+    if (is.na(data$premature_atrial_complexes[i])&grepl("premature atrial complexes",data[[x]][i])) {
+      data$premature_atrial_complexes[i]=1
+      print(i)
+    }
+  }
+  return(data$premature_atrial_complexes)
+}
+
+for (p in ls(data,pattern="p12653_i2_a")) {
+  data$premature_atrial_complexes=ECG(p)
+}   
+
+data$premature_atrial_complexes[is.na(data$premature_atrial_complexes)]=0
+table(data$premature_atrial_complexes)
+
+############################################premature ventricular complexes
+
+data$premature_ventricular_complexes=NA
+
+ECG=function(x){
+  for (i in 1:nrow(data)) {
+    if (is.na(data$premature_ventricular_complexes[i])&grepl("premature ventricular complexes",data[[x]][i])) {
+      data$premature_ventricular_complexes[i]=1
+      print(i)
+    }
+  }
+  return(data$premature_ventricular_complexes)
+}
+
+for (p in ls(data,pattern="p12653_i2_a")) {
+  data$premature_ventricular_complexes=ECG(p)
+}   
+
+data$premature_ventricular_complexes[is.na(data$premature_ventricular_complexes)]=0
+table(data$premature_ventricular_complexes)
+
+
+############################################sinus arrhythmia
+
+data$sinus_arrhythmia=NA
+
+ECG=function(x){
+  for (i in 1:nrow(data)) {
+    if (is.na(data$sinus_arrhythmia[i])&grepl("sinus arrhythmia",data[[x]][i])) {
+      data$sinus_arrhythmia[i]=1
+      print(i)
+    }
+  }
+  return(data$sinus_arrhythmia)
+}
+
+for (p in ls(data,pattern="p12653_i2_a")) {
+  data$sinus_arrhythmia=ECG(p)
+}   
+
+data$sinus_arrhythmia[is.na(data$sinus_arrhythmia)]=0
+table(data$sinus_arrhythmia)
+
+############################################Sinus rhythm with 1st degree AV block
+
+data$Sinus_rhythm_1st_AV_block=NA
+
+ECG=function(x){
+  for (i in 1:nrow(data)) {
+    if (is.na(data$Sinus_rhythm_1st_AV_block[i])&grepl("Sinus rhythm with 1st degree AV block",data[[x]][i])) {
+      data$Sinus_rhythm_1st_AV_block[i]=1
+      print(i)
+    }
+  }
+  return(data$Sinus_rhythm_1st_AV_block)
+}
+
+for (p in ls(data,pattern="p12653_i2_a")) {
+  data$Sinus_rhythm_1st_AV_block=ECG(p)
+}   
+
+data$Sinus_rhythm_1st_AV_block[is.na(data$Sinus_rhythm_1st_AV_block)]=0
+table(data$Sinus_rhythm_1st_AV_block)
+
+############################################Marked sinus bradycardia
+
+data$Marked_sinus_bradycardia=NA
+
+ECG=function(x){
+  for (i in 1:nrow(data)) {
+    if (is.na(data$Marked_sinus_bradycardia[i])&grepl("Marked sinus bradycardia",data[[x]][i])) {
+      data$Marked_sinus_bradycardia[i]=1
+      print(i)
+    }
+  }
+  return(data$Marked_sinus_bradycardia)
+}
+
+for (p in ls(data,pattern="p12653_i2_a")) {
+  data$Marked_sinus_bradycardia=ECG(p)
+}   
+
+data$Marked_sinus_bradycardia[is.na(data$Marked_sinus_bradycardia)]=0
+table(data$Marked_sinus_bradycardia)
+
+############################################Atrial fibrillation
+
+data$Atrial_fibrillation=NA
+
+ECG=function(x){
+  for (i in 1:nrow(data)) {
+    if (is.na(data$Atrial_fibrillation[i])&grepl("Atrial fibrillation",data[[x]][i])) {
+      data$Atrial_fibrillation[i]=1
+      print(i)
+    }
+  }
+  return(data$Atrial_fibrillation)
+}
+
+for (p in ls(data,pattern="p12653_i2_a")) {
+  data$Atrial_fibrillation=ECG(p)
+}   
+
+data$Atrial_fibrillation[is.na(data$Atrial_fibrillation)]=0
+table(data$Atrial_fibrillation)
+
+############################################Atrial flutter
+
+data$Atrial_flutter=NA
+
+ECG=function(x){
+  for (i in 1:nrow(data)) {
+    if (is.na(data$Atrial_flutter[i])&grepl("Atrial flutter",data[[x]][i])) {
+      data$Atrial_flutter[i]=1
+      print(i)
+    }
+  }
+  return(data$Atrial_flutter)
+}
+
+for (p in ls(data,pattern="p12653_i2_a")) {
+  data$Atrial_flutter=ECG(p)
+}   
+
+data$Atrial_flutter[is.na(data$Atrial_flutter)]=0
+table(data$Atrial_flutter)
+
+#################################################################logistic model
+# 'Sinus tachycardia' Sinus_tachycardia
+# 'Sinus rhythm with short PR' Sinus_rhythm_with_short_PR 
+# 'sinus arrhythmia' sinus_arrhythmia
+# 'Sinus rhythm with 1st degree AV block' Sinus_rhythm_1st_AV_block
+# 'Marked sinus bradycardia' Marked_sinus_bradycardia
+# 'Atrial fibrillation' Atrial_fibrillation
+
+
+
+
+####
+
+data$coffee_type=as.factor(data$coffee_type)
+data$coffee_cup_dayi2=as.factor(data$coffee_cup_dayi2)
+data$coffee_cup_dayi2=as.numeric(data$coffee_cup_dayi2)
+table(data$coffee_cup_dayi2)
+table(data$coffee_type)
+# 拟合逻辑回归模型
+data$a=NA
+data$a[data$coffee_type%in%c(0)]=0
+data$a[data$coffee_type%in%c(1)]=1
+table(data$a)
+#sum(data$coffee_type%in%c(0,1,2,3))
+sum(data$Atrial_fibrillation==1 & data$coffee_type%in%c(1,2,3)&a)
+100*sum(data$Atrial_fibrillation==1 & data$coffee_type%in%c(1,2,3))/sum(data$coffee_type%in%c(1,2,3)&a)
+
+sum(data$Atrial_fibrillation==1 & data$coffee_type%in%c(0)&a)
+100*sum(data$Atrial_fibrillation==1 & data$coffee_type%in%c(0))/sum(data$coffee_type%in%c(0)&a)
+
+sum(data$Atrial_fibrillation==1 & data$coffee_type%in%c(1)&a)
+100*sum(data$Atrial_fibrillation==1 & data$coffee_type%in%c(1))/sum(data$coffee_type%in%c(1)&a)
+
+sum(data$Atrial_fibrillation==1 & data$coffee_type%in%c(2)&a)
+100*sum(data$Atrial_fibrillation==1 & data$coffee_type%in%c(2))/sum(data$coffee_type%in%c(2)&a)
+
+sum(data$Atrial_fibrillation==1 & data$coffee_type%in%c(3)&a)
+100*sum(data$Atrial_fibrillation==1 & data$coffee_type%in%c(3))/sum(data$coffee_type%in%c(3)&a)
+
+
+
+
+a=data$p12653_i2_a0!=''|data$p12653_i2_a1!=''
+sum(data$p12653_i2_a0!=''|data$p12653_i2_a1!='')
+# 'Sinus tachycardia' Sinus_tachycardia
+# 'Sinus rhythm with short PR' Sinus_rhythm_with_short_PR 
+# 'sinus arrhythmia' sinus_arrhythmia
+# 'Sinus rhythm with 1st degree AV block' Sinus_rhythm_1st_AV_block
+# 'Marked sinus bradycardia' Marked_sinus_bradycardia
+# 'Atrial fibrillation' Atrial_fibrillation
+
+sum(is.na(data$Sinus_tachycardia)==FALSE|is.na(data$Sinus_rhythm_with_short_PR)==FALSE|
+      is.na(data$sinus_arrhythmia)==FALSE|is.na(data$Sinus_rhythm_1st_AV_block)==FALSE|
+      is.na(data$Marked_sinus_bradycardia)==FALSE|is.na(data$Atrial_fibrillation)==FALSE)
+
+
+#model 1
+model <- glm(Sinus_tachycardia ~ coffee_type + age_i2  + sex 
+             , data = data[data$coffee_type%in%c(0,2),], family = binomial(link = "logit"))
+summary_data <- summary(model)
+coef_estimate <- summary_data$coefficients[, "Estimate"]
+coef_std_error <- summary_data$coefficients[, "Std. Error"]
+odds_ratio <- exp(coef_estimate)
+lower_ci <- exp(coef_estimate - 1.96 * coef_std_error)
+upper_ci <- exp(coef_estimate + 1.96 * coef_std_error)
+p_values <- summary_data$coefficients[, "Pr(>|z|)"]
+#OR and 95%CI
+data.frame(
+  OR = odds_ratio,
+  Lower_CI = lower_ci,
+  Upper_CI = upper_ci,
+  P_Value = p_values
+)
+
+
+#model 2
+model <- glm(Sinus_tachycardia ~ coffee_type + age_i2  + sex+ ethnic+ education + smoke + diabetes 
+             , data = data[data$coffee_type%in%c(0,2),], family = binomial(link = "logit"))
+summary_data <- summary(model)
+coef_estimate <- summary_data$coefficients[, "Estimate"]
+coef_std_error <- summary_data$coefficients[, "Std. Error"]
+odds_ratio <- exp(coef_estimate)
+lower_ci <- exp(coef_estimate - 1.96 * coef_std_error)
+upper_ci <- exp(coef_estimate + 1.96 * coef_std_error)
+p_values <- summary_data$coefficients[, "Pr(>|z|)"]
+#OR and 95%CI
+data.frame(
+  OR = odds_ratio,
+  Lower_CI = lower_ci,
+  Upper_CI = upper_ci,
+  P_Value = p_values
+)
+
+#model 3
+model <- glm(Sinus_tachycardia ~ coffee_type + age_i2  + sex + ethnic+ education + smoke + 
+               household_i2+ high_blood_pressure + diabetes + milk + BMI_i2
+             +tea_i2 + vegetable_i2 + fruit_i2 
+             , data = data[data$coffee_type%in%c(0,1),], family = binomial())
+summary_data <- summary(model)
+coef_estimate <- summary_data$coefficients[, "Estimate"]
+coef_std_error <- summary_data$coefficients[, "Std. Error"]
+odds_ratio <- exp(coef_estimate)
+lower_ci <- exp(coef_estimate - 1.96 * coef_std_error)
+upper_ci <- exp(coef_estimate + 1.96 * coef_std_error)
+p_values <- summary_data$coefficients[, "Pr(>|z|)"]
+#OR and 95%CI
+data.frame(
+  OR = odds_ratio,
+  Lower_CI = lower_ci,
+  Upper_CI = upper_ci,
+  P_Value = p_values
+)
